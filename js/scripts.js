@@ -2,23 +2,18 @@
 
 
 function nameGen() {
-  consCapArray = ["B","C","D","F","G","H","Ch","Sh","Ph","J","Jh","K", "L", "M", "N","P","Qu","R", "S", "T", "Th", "V", "W","Z"];
-  vowArray = ["a","e","i","o","u","y","au", "ae", "ai", "iu",];
-  consArray = ["b","c","d","f","g","h","ch","sh","ph","j","jh","k","l","m","n","p","qu","r","s","t","th","v","w","z"];
-  vow2Array = ["a","e","i","o","u","y"];
+  syl1Array = ["Bar","Lay", "Beth", "Bek","Bel", "Bal", "Bes", "Bys","Byr", "Ber", "Besh", "Cyr", "Col", "Der", "Dyr", "Dir", "Dor", "Dol", "Dew", "Des", "Det", "Dek", "Del", "Den", "Dem", "Dek","Ek","Er","Et","El","Ed","Es","Ex","Ew","Fer", "Fir", "Fes", "For", "Fol", "Fel", "Fen",];
+  syl2Array = ["ran", "car","al", "il","el","as","ter","sen","en","ib","or","en", "is","ol","rol","len","on"]
   surName1Array = ["Light","Iron","Steel","Wood","Leaf","Gold", "Gem", "Dust","Dark","Red","Dawn", "Night","Dusk","Cold","Ice", "Flame"];
   surName2Array = ["blade","sword","glow", "flower", "fire", "eye","soul","run","sun"];
 
-  var firstNameNum1 = Math.floor(Math.random() * consCapArray.length);
-  var firstNameNum2 = Math.floor(Math.random() * vowArray.length);
-  var firstNameNum3 = Math.floor(Math.random() * consArray.length);
-  var firstNameNum4 = Math.floor(Math.random() * vow2Array.length);
-  var firstNameNum5 = Math.floor(Math.random() * consArray.length);
+  var syl1Num = Math.floor(Math.random() * syl1Array.length);
+  var syl2Num = Math.floor(Math.random() * syl2Array.length);
 
   var surNameNum1 = Math.floor(Math.random() * surName1Array.length);
   var surNameNum2 = Math.floor(Math.random() * surName2Array.length);
 
-  var firstName = consCapArray[firstNameNum1] + vowArray[firstNameNum2] + consArray[firstNameNum3] + vow2Array[firstNameNum4] + consArray[firstNameNum5];
+  var firstName = syl1Array[syl1Num] + syl2Array[syl2Num];
   var surName = surName1Array[surNameNum1] + surName2Array[surNameNum2];
   var name = firstName + " " + surName;
   return name;
