@@ -56,12 +56,13 @@ function Character(name, species, gender, personality, job) {
 }
 
 $(document).ready(function() {
-  $('#button1').click(function(){
+  $('.add-button').click(function(){
     event.preventDefault();
     var newChar1 = new Character (nameGen(),specGen(),genderGen(),personalityGen(), jobGen());
     console.log(newChar1);
-
+    $(".add-button").hide();
     $("#char1").append("<div class=\"charbox\">" + "<p><h2>" + newChar1.name + "</h2></p>" + "<p><strong>Species: </strong>" + newChar1.species + "</p>" +"<p><strong>Gender: </strong>" + newChar1.gender + "</p>" +"<p><strong>Personality: </strong>" + newChar1.personality + "</p>" +"<p><strong>Job: </strong>" + newChar1.job + "</p>" +"</div>");
+    $(".row").append("<div class=\"col-md-4\" id=\"char1\">" +"<button type=\"button\" class=\"add-button\">Add character</button>" +"</div>");
     // $("#char1").append();
     // $("#char1").append();
     // $("#char1").append();
