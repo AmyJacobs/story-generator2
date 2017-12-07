@@ -58,8 +58,14 @@ function Character(name, species, gender, personality, job) {
 $(document).ready(function() {
   $('#button1').click(function(){
     event.preventDefault();
-    var newChar = new Character (nameGen(),specGen(),genderGen(),personalityGen(), jobGen());
-    console.log(newChar);
+    var newChar1 = new Character (nameGen(),specGen(),genderGen(),personalityGen(), jobGen());
+    console.log(newChar1);
+
+    $("#char1").append("<div class=\"charbox\">" + "<p><h2>" + newChar1.name + "</h2></p>" + "<p><strong>Species: </strong>" + newChar1.species + "</p>" +"<p><strong>Gender: </strong>" + newChar1.gender + "</p>" +"<p><strong>Personality: </strong>" + newChar1.personality + "</p>" +"<p><strong>Job: </strong>" + newChar1.job + "</p>" +"</div>");
+    // $("#char1").append();
+    // $("#char1").append();
+    // $("#char1").append();
+    // $("#char1").append();
 
     // console.log(nameGen());
     // console.log(specGen());

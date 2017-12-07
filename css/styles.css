@@ -9,7 +9,22 @@ h1 {
   font-size: 120px;
 }
 
+h2 {
+  margin-top:-10px;
+  font-family: 'Tangerine', cursive;
+  border-bottom: 1px solid #4f0015;
+  font-weight:bold;
+  font-size:50px;
+}
+
 .add-button {
   font-weight: bold;
+  color: #4f0015;
+}
+
+.charbox {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
   color: #4f0015;
 }
