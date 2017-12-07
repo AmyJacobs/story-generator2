@@ -40,13 +40,32 @@ function personalityGen() {
   return personality;
 }
 
+function jobGen() {
+  jobArray = ["Wizard","Cleric", "Knight", "Ranger", "Thief", "Warlock", "Merchant", "Shephard","Blacksmith", "Scribe", "Tailor","Carpenter","Squire","Baker","Watchman","Druid", "Monk","Hunter", "Shaman"]
+  var jobNum = Math.floor(Math.random() * jobArray.length);
+  var job = jobArray[jobNum];
+  return job;
+}
+
+function Character(name, species, gender, personality, job) {
+  this.name = name;
+  this.species = species;
+  this.gender = gender;
+  this.personality = personality;
+  this.job = job;
+}
 
 $(document).ready(function() {
   $('#button1').click(function(){
     event.preventDefault();
-    console.log(nameGen());
-    console.log(specGen());
-    console.log(genderGen());
-    console.log(personalityGen());
+    var newChar = new Character (nameGen(),specGen(),genderGen(),personalityGen(), jobGen());
+    console.log(newChar);
+
+    // console.log(nameGen());
+    // console.log(specGen());
+    // console.log(genderGen());
+    // console.log(personalityGen());
+    // console.log(jobGen());
+    // console.log("---------");
   });
 });
