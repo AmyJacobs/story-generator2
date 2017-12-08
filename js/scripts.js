@@ -56,7 +56,7 @@ function Character(name, species, gender, personality, job) {
 
 function newChar() {
   var newChar1 = new Character (nameGen(),specGen(),genderGen(),personalityGen(), jobGen());
-  $("#char1").append("<div class=\"col-md-3\">" + "<div class=\"charbox\">" + "<p><h2>" + newChar1.name + "</h2></p>" + "<p><strong>Species: </strong>" + newChar1.species + "</p>" +"<p><strong>Gender: </strong>" + newChar1.gender + "</p>" +"<p><strong>Personality: </strong>" + newChar1.personality + "</p><p><strong>Job: </strong>" + newChar1.job + "</p>" +"</div>" + "</div>");
+  $("#characters").append("<div class=\"col-md-3\">" + "<div class=\"charbox\">" + "<p><h2>" + newChar1.name + "</h2></p>" + "<p><strong>Species: </strong>" + newChar1.species + "</p>" +"<p><strong>Gender: </strong>" + newChar1.gender + "</p>" +"<p><strong>Personality: </strong>" + newChar1.personality + "</p><p><strong>Job: </strong>" + newChar1.job + "</p>" +"</div>" + "</div>");
 }
 
 $(document).ready(function() {

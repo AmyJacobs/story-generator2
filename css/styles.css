@@ -14,12 +14,14 @@ h2 {
   font-family: 'Tangerine', cursive;
   border-bottom: 1px solid #4f0015;
   font-weight:bold;
-  font-size:50px;
+  font-size:40px;
 }
 
 .add-button {
   font-weight: bold;
   color: #4f0015;
+  margin-bottom:20px;
+  border-radius: 25px;
 }
 
 .charbox {
@@ -29,4 +31,28 @@ h2 {
   color: #4f0015;
   border-radius: 25px;
   margin-bottom:20px;
+}
+
+.relbox {
+  width:40%;
+  text-align: center;
+  padding: 5px;
+  padding-bottom:0px;
+  background-color: white;
+  color: #4f0015;
+  border:1px solid #4f0015;
+  border-radius: 25px;
+  margin:auto;
+  margin-bottom:20px;
+}
+
+#relationships {
+  width:100%;
+  margin-left:10%;
+  position: fixed;
+  z-index:10;
+}
+
+#characters {
+  
 }
