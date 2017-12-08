@@ -4,9 +4,8 @@
 function nameGen() {
   syl1Array = ["Bar","Lay", "Beth", "Bek","Bel", "Bal", "Bes", "Bys","Byr", "Ber", "Besh", "Cyr", "Col", "Der", "Dyr", "Dir", "Dor", "Dol", "Dew", "Des", "Det", "Dek", "Del", "Den", "Dem", "Dek","Ek","Er","Et","El","Ed","Es","Ex","Ew","Fer", "Fir", "Fes", "For", "Fol", "Fel", "Fen",];
   syl2Array = ["ran", "car","al", "il","el","as","ter","sen","en","ib","or","en", "is","ol","rol","len","on"]
-  surName1Array = ["Light","Iron","Steel","Wood","Leaf","Gold", "Gem", "Dust","Dark","Red","Dawn", "Night","Dusk","Cold","Ice", "Flame"];
-  surName2Array = ["blade","sword","glow", "flower", "fire", "eye","soul","run","sun"];
-
+  surName1Array = ["Light","Iron","Steel","Wood","Leaf","Gold", "Gem", "Dust","Dark","Red","Dawn", "Night","Dusk","Cold","Ice", "Flame", "Wood", "Bright", "Sky","Storm","Hail","Mist","Hawk", "Eagle","Rain", "Willow","Reed", "Ash",];
+  surName2Array = ["blade","sword","glow", "flower", "fire", "eye","soul","run","sun", "blood","star","heart","shadow","strider","wing","cloud","blaze","bow",];
   var syl1Num = Math.floor(Math.random() * syl1Array.length);
   var syl2Num = Math.floor(Math.random() * syl2Array.length);
 
@@ -55,14 +54,20 @@ function Character(name, species, gender, personality, job) {
   this.job = job;
 }
 
+function newChar() {
+  var newChar1 = new Character (nameGen(),specGen(),genderGen(),personalityGen(), jobGen());
+  $("#char1").append("<div class=\"col-md-3\">" + "<div class=\"charbox\">" + "<p><h2>" + newChar1.name + "</h2></p>" + "<p><strong>Species: </strong>" + newChar1.species + "</p>" +"<p><strong>Gender: </strong>" + newChar1.gender + "</p>" +"<p><strong>Personality: </strong>" + newChar1.personality + "</p><p><strong>Job: </strong>" + newChar1.job + "</p>" +"</div>" + "</div>");
+}
+
 $(document).ready(function() {
+  charCounter = 0;
   $('.add-button').click(function(){
     event.preventDefault();
-    var newChar1 = new Character (nameGen(),specGen(),genderGen(),personalityGen(), jobGen());
-    console.log(newChar1);
-    $(".add-button").hide();
-    $("#char1").append("<div class=\"charbox\">" + "<p><h2>" + newChar1.name + "</h2></p>" + "<p><strong>Species: </strong>" + newChar1.species + "</p>" +"<p><strong>Gender: </strong>" + newChar1.gender + "</p>" +"<p><strong>Personality: </strong>" + newChar1.personality + "</p>" +"<p><strong>Job: </strong>" + newChar1.job + "</p>" +"</div>");
-    $(".row").append("<div class=\"col-md-4\" id=\"char1\">" +"<button type=\"button\" class=\"add-button\">Add character</button>" +"</div>");
+    console.log("this");
+    charCounter +=1;
+    // console.log(newChar1);
+    newChar();
+
     // $("#char1").append();
     // $("#char1").append();
     // $("#char1").append();
