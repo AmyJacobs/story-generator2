@@ -1,5 +1,5 @@
 
-
+charArray = [];
 
 function nameGen() {
   syl1Array = ["Bar","Lay", "Beth", "Bek","Bel", "Bal", "Bes", "Bys","Byr", "Ber", "Besh", "Cyr", "Col", "Der", "Dyr", "Dir", "Dor", "Dol", "Dew", "Des", "Det", "Dek", "Del", "Den", "Dem", "Dek","Ek","Er","Et","El","Ed","Es","Ex","Ew","Fer", "Fir", "Fes", "For", "Fol", "Fel", "Fen",];
@@ -56,18 +56,22 @@ function Character(name, species, gender, personality, job) {
 
 function newChar() {
   var newChar1 = new Character (nameGen(),specGen(),genderGen(),personalityGen(), jobGen());
+  charArray.push(newChar1);
   $("#characters").append("<div class=\"col-md-3\">" + "<div class=\"charbox\">" + "<p><h2>" + newChar1.name + "</h2></p>" + "<p><strong>Species: </strong>" + newChar1.species + "</p>" +"<p><strong>Gender: </strong>" + newChar1.gender + "</p>" +"<p><strong>Personality: </strong>" + newChar1.personality + "</p><p><strong>Job: </strong>" + newChar1.job + "</p>" +"</div>" + "</div>");
 }
 
+function relGen() {
+  relArray = ["Friends","Rivals", "Siblings", "Cousins", "Dating", "Married", "Enemies"]
+  var relNum = Math.floor(Math.random() * relArray.length);
+  var relationship = relArray[relNum];
+  return relationship;
+}
+
 $(document).ready(function() {
-  charCounter = 0;
   $('.add-button').click(function(){
     event.preventDefault();
-    console.log("this");
-    charCounter +=1;
     // console.log(newChar1);
     newChar();
-
     // $("#char1").append();
     // $("#char1").append();
     // $("#char1").append();
@@ -79,5 +83,12 @@ $(document).ready(function() {
     // console.log(personalityGen());
     // console.log(jobGen());
     // console.log("---------");
+  });
+  $('.rel-button').click(function(){
+    relArray2 = [];
+    charIndex = parseInt(charArray.length * 0.75);
+    for (var index = 0; index < charIndex; index += 1) {
+      console.log(relGen());
+    }
   });
 });
