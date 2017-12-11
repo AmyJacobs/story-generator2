@@ -39,7 +39,7 @@ h2 {
   border-radius: 25px;
   margin-bottom: 36px;
   display: inline-block;
-  width: 241px;
+  width: 250px;
   height: 208px;
   margin-right: 33px;
 }
@@ -58,17 +58,44 @@ h2 {
   display: inline-block;
   width: 71px;
   height: 31px;
-  margin-right: 204px;
+  margin-right: 213px;
   margin-bottom: 208px;
 }
 
 #relationships {
   width: 71%;
-  margin-left: 205px;
+  margin-left: 215px;
   position: absolute;
   z-index:10;
   margin-top: 104px;
 }
+
+#relationshipsVert {
+  width: 93%;
+  margin-left: 71px;
+  position: absolute;
+  z-index:10;
+  margin-top: 210px;
+}
+
+.relboxVert {
+  /*width:40%;*/
+  text-align: center;
+  padding: 5px;
+  padding-bottom:0px;
+  background-color: white;
+  color: #4f0015;
+  border:1px solid #4f0015;
+  border-radius: 25px;
+  /*margin:auto;
+  margin-bottom:20px;*/
+  display: inline-block;
+  width: 71px;
+  height: 31px;
+  margin-right: 213px;
+  margin-bottom: 208px;
+  transform: rotate(-90deg);
+  }
 
 #characters {
 

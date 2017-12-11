@@ -61,10 +61,26 @@ function newChar() {
 }
 
 function relGen() {
-  relArray = ["Friends","Rivals", "Siblings", "Cousins", "Dating", "Married", "Enemies"]
-  var relNum = Math.floor(Math.random() * relArray.length);
-  var relationship = relArray[relNum];
-  return relationship;
+  $("#relationships").empty();
+  charIndex = parseInt(charArray.length * 0.75);
+  for (var index = 0; index < charIndex; index += 1) {
+    relArray = ["Friends","Rivals", "Siblings", "Cousins", "Dating", "Married", "Enemies", "Exes", "Partners", "Frienemies","In love",]
+    var relNum = Math.floor(Math.random() * relArray.length);
+    var relationship = relArray[relNum];
+    $("#relationships").append("<div class=\"relbox\">" + "<p>" + relationship + "</p>"+ "</div>");
+  }
+}
+
+function relGenVert() {
+  $("#relationshipsVert").empty();
+  charIndex = parseInt(charArray.length - 4);
+  console.log(charIndex);
+  for (var index = 0; index < charIndex; index += 1) {
+    relArray = ["Friends","Rivals", "Siblings", "Cousins", "Dating", "Married", "Enemies", "Exes", "Partners", "Frienemies","In love",]
+    var relNum = Math.floor(Math.random() * relArray.length);
+    var relationship = relArray[relNum];
+    $("#relationshipsVert").append("<div class=\"relboxVert\">" + "<p>" + relationship + "</p>"+ "</div>");
+  }
 }
 
 $(document).ready(function() {
@@ -86,12 +102,7 @@ $(document).ready(function() {
   });
   $('.rel-button').click(function(){
     event.preventDefault();
-    relArray2 = [];
-    $("#relationships").empty();
-    charIndex = parseInt(charArray.length * 0.75);
-    for (var index = 0; index < charIndex; index += 1) {
-      relationship = relGen();
-      $("#relationships").append("<div class=\"relbox\">" + "<p>" + relationship + "</p>"+ "</div>");
-    }
+    relGen();
+    relGenVert();
   });
 });
