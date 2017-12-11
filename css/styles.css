@@ -37,11 +37,11 @@ h2 {
   background-color: white;
   color: #4f0015;
   border-radius: 25px;
-  /*margin-bottom:20px;*/
-  float: left;
+  margin-bottom: 36px;
+  display: inline-block;
   width: 241px;
   height: 208px;
-  margin: 1em;
+  margin-right: 33px;
 }
 
 .relbox {
@@ -55,16 +55,16 @@ h2 {
   border-radius: 25px;
   /*margin:auto;
   margin-bottom:20px;*/
-  float: left;
+  display: inline-block;
   width: 71px;
   height: 31px;
-  margin-right: 199px;
+  margin-right: 204px;
   margin-bottom: 208px;
 }
 
 #relationships {
   width: 831px;
-  margin-left:14%;
+  margin-left: 205px;
   position: absolute;
   z-index:10;
   margin-top: 104px;

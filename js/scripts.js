@@ -5,7 +5,7 @@ function nameGen() {
   syl1Array = ["Bar","Lay", "Beth", "Bek","Bel", "Bal", "Bes", "Bys","Byr", "Ber", "Besh", "Cyr", "Col", "Der", "Dyr", "Dir", "Dor", "Dol", "Dew", "Des", "Det", "Dek", "Del", "Den", "Dem", "Dek","Ek","Er","Et","El","Ed","Es","Ex","Ew","Fer", "Fir", "Fes", "For", "Fol", "Fel", "Fen",];
   syl2Array = ["ran", "car","al", "il","el","as","ter","sen","en","ib","or","en", "is","ol","rol","len","on"]
   surName1Array = ["Light","Iron","Steel","Wood","Leaf","Gold", "Gem", "Dust","Dark","Red","Dawn", "Night","Dusk","Cold","Ice", "Flame", "Wood", "Bright", "Sky","Storm","Hail","Mist","Hawk", "Eagle","Rain", "Willow","Reed", "Ash",];
-  surName2Array = ["blade","sword","glow", "flower", "fire", "eye","soul","run","sun", "blood","star","heart","shadow","strider","wing","cloud","blaze","bow",];
+  surName2Array = ["blade","sword","glow", "flower", "fire", "eye","soul","run","sun", "blood","star","heart","shadow","strider","wing","cloud","blaze","bow","song","singer",];
   var syl1Num = Math.floor(Math.random() * syl1Array.length);
   var syl2Num = Math.floor(Math.random() * syl2Array.length);
 
@@ -85,7 +85,9 @@ $(document).ready(function() {
     // console.log("---------");
   });
   $('.rel-button').click(function(){
+    event.preventDefault();
     relArray2 = [];
+    $("#relationships").empty();
     charIndex = parseInt(charArray.length * 0.75);
     for (var index = 0; index < charIndex; index += 1) {
       relationship = relGen();
