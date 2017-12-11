@@ -39,7 +39,7 @@ h2 {
   border-radius: 25px;
   margin-bottom: 36px;
   display: inline-block;
-  width: 250px;
+  width: 270px;
   height: 208px;
   margin-right: 33px;
 }
@@ -58,21 +58,21 @@ h2 {
   display: inline-block;
   width: 71px;
   height: 31px;
-  margin-right: 213px;
+  margin-right: 235px;
   margin-bottom: 208px;
 }
 
 #relationships {
-  width: 71%;
-  margin-left: 215px;
+  width: 52%;
+  margin-left: 234px;
   position: absolute;
   z-index:10;
   margin-top: 104px;
 }
 
 #relationshipsVert {
-  width: 93%;
-  margin-left: 71px;
+  width: 60%;
+  margin-left: 87px;
   position: absolute;
   z-index:10;
   margin-top: 210px;
@@ -92,7 +92,7 @@ h2 {
   display: inline-block;
   width: 71px;
   height: 31px;
-  margin-right: 213px;
+  margin-right: 232px;
   margin-bottom: 208px;
   transform: rotate(-90deg);
   }

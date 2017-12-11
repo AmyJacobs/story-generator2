@@ -7,9 +7,12 @@ function nameGen() {
   surName1Array = ["Light","Iron","Steel","Wood","Leaf","Gold", "Gem", "Dust","Dark","Red","Dawn", "Night","Dusk","Cold","Ice", "Flame", "Wood", "Bright", "Sky","Storm","Hail","Mist","Hawk", "Eagle","Rain", "Willow","Reed", "Ash","Bear", "Dragon",];
   surName2Array = ["blade","sword","glow", "flower", "fire", "eye","soul","run","sun", "blood","star","heart","shadow","strider","wing","cloud","blaze","bow","song","singer",];
 
-  epithArray = ["the Red", "the Brave", "the Good", "the Loud", "the Silent", "the Wise", "the Pale", "the Cursed","the Ugly", "the Beautiful", "the False", "the Wretched", "the Hound", "the Dragon", "the Beast", "the Thief", "the Scrawny", "the Hawk", "the Rat", "the Spider", "the Merciful", "the Lamb", "the Cold", "the Fox", "the Owl", "the Angry", "the Victorious", "the Bear", "the Risen", "the Phoenix", "the Loyal", "the Shield", "the Swift", "the White", "the Grey", "the Dark", "the Shadow", "the Bloody"];
+  epithArray = ["the Red", "the Brave", "the Good", "the Loud", "the Silent", "the Wise", "the Pale", "the Cursed","the Ugly", "the Beautiful", "the False", "the Wretched", "the Hound", "the Dragon", "the Beast", "the Thief", "the Scrawny", "the Hawk", "the Rat", "the Spider", "the Merciful", "the Lamb", "the Cold", "the Fox", "the Owl", "the Angry", "the Victorious", "the Bear", "the Risen", "the Phoenix", "the Loyal", "the Shield", "the Swift", "the White", "the Grey", "the Shadow", "the Bloody"];
 
-  nameStyleArray = ["Epithet", "Surname"];
+  placeArray1 = ["Red", "Ice", "Green", "New", "High", "White", "Black", "Sky","Cold","Grey","Dark", "Rain", "Mist",];
+  placeArray2 = ["castle", "land", "lund", "valley", "town","plain", "wood", ];
+
+  nameStyleArray = ["Epithet", "Surname", "Placename"];
   var nameStyleNum = Math.floor(Math.random() * nameStyleArray.length);
   var nameStyle = nameStyleArray[nameStyleNum];
 
@@ -20,6 +23,10 @@ function nameGen() {
   } else if (nameStyle === "Epithet"){
     epithNum = Math.floor(Math.random() *  epithArray.length);
     var surName = epithArray[epithNum];
+  } else if (nameStyle === "Placename"){
+    placeNum1 = Math.floor(Math.random() *  placeArray1.length);
+    placeNum2 = Math.floor(Math.random() *  placeArray2.length);
+    var surName = "of " + placeArray1[placeNum1] + placeArray2[placeNum2];
   }
 
   var syl1Num = Math.floor(Math.random() * syl1Array.length);
@@ -73,7 +80,7 @@ function newChar() {
 
 function relGen() {
   $("#relationships").empty();
-  charIndex = parseInt(charArray.length * 0.75);
+  charIndex = parseInt(charArray.length * 0.6);
   for (var index = 0; index < charIndex; index += 1) {
     relArray = ["Friends","Rivals", "Siblings", "Cousins", "Dating", "Married", "Enemies", "Exes", "Partners", "Frienemies","In love",]
     var relNum = Math.floor(Math.random() * relArray.length);
@@ -84,7 +91,7 @@ function relGen() {
 
 function relGenVert() {
   $("#relationshipsVert").empty();
-  charIndex = parseInt(charArray.length - 4);
+  charIndex = parseInt(charArray.length - 3);
   console.log(charIndex);
   for (var index = 0; index < charIndex; index += 1) {
     relArray = ["Friends","Rivals", "Siblings", "Cousins", "Dating", "Married", "Enemies", "Exes", "Partners", "Frienemies","In love",]
