@@ -62,6 +62,14 @@ h2 {
   margin-bottom: 208px;
 }
 
+#button-box {
+  text-align: center;
+}
+
+#buttons {
+  display: inline-block;
+}
+
 #relationships {
   width: 52%;
   margin-left: 234px;
