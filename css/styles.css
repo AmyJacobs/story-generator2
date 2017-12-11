@@ -59,10 +59,11 @@ h2 {
   width: 71px;
   height: 31px;
   margin-right: 199px;
+  margin-bottom: 208px;
 }
 
 #relationships {
-  width:100%;
+  width: 831px;
   margin-left:14%;
   position: absolute;
   z-index:10;
