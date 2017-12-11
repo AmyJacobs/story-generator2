@@ -57,7 +57,7 @@ function Character(name, species, gender, personality, job) {
 function newChar() {
   var newChar1 = new Character (nameGen(),specGen(),genderGen(),personalityGen(), jobGen());
   charArray.push(newChar1);
-  $("#characters").append("<div class=\"col-md-3\">" + "<div class=\"charbox\">" + "<p><h2>" + newChar1.name + "</h2></p>" + "<p><strong>Species: </strong>" + newChar1.species + "</p>" +"<p><strong>Gender: </strong>" + newChar1.gender + "</p>" +"<p><strong>Personality: </strong>" + newChar1.personality + "</p><p><strong>Job: </strong>" + newChar1.job + "</p>" +"</div>" + "</div>");
+  $("#characters").append("<div class=\"charbox\">" + "<p><h2>" + newChar1.name + "</h2></p>" + "<p><strong>Species: </strong>" + newChar1.species + "</p>" +"<p><strong>Gender: </strong>" + newChar1.gender + "</p>" +"<p><strong>Personality: </strong>" + newChar1.personality + "</p><p><strong>Job: </strong>" + newChar1.job + "</p>" +"</div>");
 }
 
 function relGen() {
@@ -89,7 +89,7 @@ $(document).ready(function() {
     charIndex = parseInt(charArray.length * 0.75);
     for (var index = 0; index < charIndex; index += 1) {
       relationship = relGen();
-      $("#relationships").append("<div class=\"col-md-3\">" + "<div class=\"relbox\">" + "<p>" + relationship + "</p>"+ "</div>" + "</div>");
+      $("#relationships").append("<div class=\"relbox\">" + "<p>" + relationship + "</p>"+ "</div>");
     }
   });
 });
