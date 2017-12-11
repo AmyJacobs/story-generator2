@@ -88,7 +88,8 @@ $(document).ready(function() {
     relArray2 = [];
     charIndex = parseInt(charArray.length * 0.75);
     for (var index = 0; index < charIndex; index += 1) {
-      console.log(relGen());
+      relationship = relGen();
+      $("#relationships").append("<div class=\"col-md-3\">" + "<div class=\"relbox\">" + "<p>" + relationship + "</p>"+ "</div>" + "</div>");
     }
   });
 });
