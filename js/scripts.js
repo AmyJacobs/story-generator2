@@ -80,9 +80,14 @@ function newChar() {
 
 function relGen() {
   $("#relationships").empty();
-  charIndex = parseInt(charArray.length * 0.6);
+  charIndex = parseInt(charArray.length * 0.66666666666);
+  if (charArray.length%3 === 0) {
+    charIndex+=1;
+    console.log("ash");
+  }
+  console.log(charIndex);
   for (var index = 0; index < charIndex; index += 1) {
-    relArray = ["Friends","Rivals", "Siblings", "Cousins", "Dating", "Married", "Enemies", "Exes", "Partners", "Frienemies","In love",]
+    relArray = ["Friends","Rivals", "Siblings", "Cousins", "Dating", "Married", "Enemies", "Exes", "Partners","In love",]
     var relNum = Math.floor(Math.random() * relArray.length);
     var relationship = relArray[relNum];
     $("#relationships").append("<div class=\"relbox\">" + "<p>" + relationship + "</p>"+ "</div>");
@@ -92,9 +97,8 @@ function relGen() {
 function relGenVert() {
   $("#relationshipsVert").empty();
   charIndex = parseInt(charArray.length - 3);
-  console.log(charIndex);
   for (var index = 0; index < charIndex; index += 1) {
-    relArray = ["Friends","Rivals", "Siblings", "Cousins", "Dating", "Married", "Enemies", "Exes", "Partners", "Frienemies","In love",]
+    relArray = ["Friends","Rivals", "Siblings", "Cousins", "Dating", "Married", "Enemies", "Exes", "Partners","In love",]
     var relNum = Math.floor(Math.random() * relArray.length);
     var relationship = relArray[relNum];
     $("#relationshipsVert").append("<div class=\"relboxVert\">" + "<p>" + relationship + "</p>"+ "</div>");
@@ -104,19 +108,7 @@ function relGenVert() {
 $(document).ready(function() {
   $('.add-button').click(function(){
     event.preventDefault();
-    // console.log(newChar1);
     newChar();
-    // $("#char1").append();
-    // $("#char1").append();
-    // $("#char1").append();
-    // $("#char1").append();
-
-    // console.log(nameGen());
-    // console.log(specGen());
-    // console.log(genderGen());
-    // console.log(personalityGen());
-    // console.log(jobGen());
-    // console.log("---------");
   });
   $('.rel-button').click(function(){
     event.preventDefault();
