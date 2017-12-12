@@ -112,27 +112,28 @@ function newChar() {
 }
 
 function relGen() {
-  $("#relationships").empty();
+  $("#relationships-output").empty();
   var charIndex = parseInt(charArray.length * 0.66666666666);
   if (charArray.length%3 === 0) {
     charIndex+=1;
   }
-  for (var index = 0; index < charIndex; index += 1) {
-    relArray = ["Friends","Rivals", "Siblings", "Cousins", "Dating", "Married", "Enemies", "Exes", "Partners","In love",]
-    var relNum = Math.floor(Math.random() * relArray.length);
-    var relationship = relArray[relNum];
-    $("#relationships").append("<div class=\"relbox\">" + "<p>" + relationship + "</p>"+ "</div>");
-  }
-}
+  for (var index = 0; index < charArray.length; index += 1) {
+    var relArray = ["hates", "loves", "is friends with","is best friends with", "has a rivalry with", ]
+    var firstIndex = index;
+    for (var j = 0; j < charArray.length; j += 1) {
+      if (j != firstIndex) {
+        var charIndex = charArray[firstIndex];
+        var char2Index = charArray[j];
+        var relNum = Math.floor(Math.random() * relArray.length);
+        var relationship = relArray[relNum];
+        $("#relationships-output").append(charIndex.name + " " + relationship + " " + char2Index.name + ". ");
 
-function relGenVert() {
-  $("#relationshipsVert").empty();
-  var charIndex = parseInt(charArray.length - 3);
-  for (var index = 0; index < charIndex; index += 1) {
-    relArray = ["Friends","Rivals", "Siblings", "Cousins", "Dating", "Married", "Enemies", "Exes", "Partners","In love",]
-    var relNum = Math.floor(Math.random() * relArray.length);
-    var relationship = relArray[relNum];
-    $("#relationshipsVert").append("<div class=\"relboxVert\">" + "<p>" + relationship + "</p>"+ "</div>");
+        if (j===charArray.length - 1) {
+          $("#relationships-output").append("<br><br>")
+        }
+      }
+    }
+
   }
 }
 
@@ -140,11 +141,10 @@ $(document).ready(function() {
   $('.add-button').click(function(){
     event.preventDefault();
     newChar();
-    console.log(hairGen());
   });
   $('.rel-button').click(function(){
     event.preventDefault();
+    $("#relationships-output").show();
     relGen();
-    relGenVert();
   });
 });

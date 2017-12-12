@@ -50,6 +50,7 @@ h2 {
 
 .relbox {
   text-align: center;
+
   padding: 5px;
   padding-bottom:0px;
   background-color: white;
@@ -72,36 +73,20 @@ h2 {
 }
 
 #relationships {
-  width: 620px;
+  width: 198px;
   margin-left: 234px;
   position: absolute;
   z-index:10;
-  margin-top: 143px;
 }
 
-#relationshipsVert {
-  width: 909px;
-  margin-left: 87px;
-  position: absolute;
-  z-index:10;
-  margin-top: 303px;
-}
-
-.relboxVert {
-  text-align: center;
-  padding: 5px;
-  padding-bottom:0px;
+#relationships-output {
+  padding:10px;
+  display:none;
   background-color: white;
   color: #4f0015;
-  border:1px solid #4f0015;
+  padding: 5px;
   border-radius: 25px;
-  display: inline-block;
-  width: 71px;
-  height: 31px;
-  margin-right: 232px;
-  margin-bottom: 307px;
-  transform: rotate(-90deg);
-  }
+}
 
 #characters {
 
